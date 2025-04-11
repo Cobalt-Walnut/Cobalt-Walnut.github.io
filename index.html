@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element with English language specification -->
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TacocaT - Home</title> <!-- Page title shown in browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to external CSS file -->
+</head>
+
+<body>
+    <!-- Navigation bar fixed at the top -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <span>TacocaT Inc.</span>
+                <img src="logo.png" alt="Logo" class="nav-logo">
+            </div>
+            <!-- Navigation menu items -->
+            <ul class="nav-links">
+                <li><a href="#web-projects">Big Projects</a></li>
+                <li><a href="#python-projects">Side Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Dark mode toggle button -->
+            <button id="darkModeToggle" class="toggle-button">DARK MODE</button>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Container with fade-in animation -->
+        <div class="container fade-in">
+            <!-- Introduction section -->
+            <section class="intro">
+                <div class="intro-text">
+                    <h1>Welcome to My Portfolio Website!</h1>
+                    <p>This is where I display all of my past and current projects.</p>
+                </div>
+                <img src="logo.png" alt="Logo" class="intro-logo">
+            </section>
+
+            <!-- Big Projects section -->
+            <section class="projects" id="big-projects">
+                <h2>Big Projects</h2>
+
+                <!-- Portfolio Website project card -->
+                <a href="projects/portfolio.html" class="project fade-in">
+                    <img src="my_website.png" alt="Portfolio Website">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio to showcase my projects.</p>
+                    </div>
+                </a>
+
+                <!-- TacocaT Project card -->
+                <a href="projects/tacocat.html" class="project fade-in">
+                    <img src="TacocaT.png" alt="TacocaT Project">
+                    <div class="project-content">
+                        <h3>TacocaT Project</h3>
+                        <p>A quadrupedal robot similar to the MIT Mini Cheetah.</p>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Side Projects section -->
+            <section class="projects" id="side-projects">
+                <h2>Side Projects</h2>
+
+                <!-- Offline Translator project card -->
+                <a href="projects/offline-translator.html" class="project fade-in">
+                    <img src="translate.png" alt="Offline Translator">
+                    <div class="project-content">
+                        <h3>Offline Translator</h3>
+                        <p>A speech-to-speech translator running on a Raspberry Pi.</p>
+                    </div>
+                </a>
+
+                <!-- Pygame Adventure project card -->
+                <a href="projects/star-trek-game.html" class="project fade-in">
+                    <img src="Star_Trek_Game.png" alt="Pygame Adventure">
+                    <div class="project-content">
+                        <h3>Star Trek Game</h3>
+                        <p>A 2D Star-Trek-based game made using Pygame, complete with sounds and images.</p>
+                    </div>
+                </a>
+            </section>
+            <!-- Coding Projects section -->
+            <section class="projects" id="coding-projects">
+                <h2>Coding Projects</h2>
+
+                <!-- Python Game project card -->
+                <a href="projects/python-game.html" class="project fade-in">
+                    <img src="python_game.jpeg" alt="Python Game">
+                    <div class="project-content">
+                        <h3>Python Game</h3>
+                        <p>A simple game made using Python and Pygame.</p>
+                    </div>
+                </a>
+
+                <!-- JavaScript Project card -->
+                <a href="projects/javascript-game.html" class="project fade-in">
+                    <img src="javascript_game.jpeg" alt="JavaScript Game">
+                    <div class="project-content">
+                        <h3>JavaScript Game</h3>
+                        <p>A simple game made using JavaScript.</p>
+                    </div>
+                </a>
+            </section>"
+
+            <!-- Contact section -->
+            <section class="contact fade-in" id="contact">
+                <h2>Contact</h2>
+                <p>Email me at doubaok1710325@gmail.com</p>
+                <p>All project links are at https://github.com/Cobalt-Walnut</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <p>© 4/10/2025 Christopher Wang.</p>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
