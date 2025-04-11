@@ -1,0 +1,257 @@
+/* Reset default styles and set base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Base body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition for dark mode */
+  line-height: 1.6;
+}
+
+/* Container for content width control */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Navbar styling */
+nav {
+  position: fixed; /* Keep navbar fixed at top */
+  width: 100%;
+  background-color: #FFDF00;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000; /* Ensure navbar stays above other content */
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateY(0); /* Start position */
+}
+
+/* Navbar container layout */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Logo styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #FFDF00;
+  padding: 5px;
+  background: white;
+}
+
+/* Navigation links list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Navigation link styling */
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Dark mode toggle button */
+.toggle-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #333;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.toggle-button.rotating {
+  animation: rotate 0.5s ease-in-out;
+}
+
+/* Section styling */
+section {
+  margin: 80px 0;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+/* Project card styling */
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: visible; /* Allow content to overflow for hover effect */
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.5s;
+  position: relative;
+}
+
+/* Project image styling */
+.project img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Project image hover effect */
+.project:hover img {
+  transform: scale(3) translateX(60px) translateY(-40px); /* Pop-out effect */
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3); /* Shadow for depth */
+  z-index: 100; /* Ensure image stays above other elements */
+}
+
+/* Project content styling */
+.project-content {
+  padding: 20px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #fafafa;
+  transition: background-color 0.5s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark-mode nav {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-links a {
+  color: #ccc;
+}
+
+body.dark-mode section {
+  background: #1c1c1c;
+}
+
+body.dark-mode .project {
+  background: #2a2a2a;
+}
+
+body.dark-mode .project:hover {
+  background: #3a3a3a;
+}
+
+body.dark-mode footer {
+  background: #1e1e1e;
+}
+
+/* Fade-in animation for sections and projects */
+.fade-in {
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start slightly below final position */
+  animation: fadeInUp 1s forwards; /* Fade and move up over 1 second */
+  animation-delay: 0.3s; /* Wait 0.3s before starting animation */
+}
+
+/* Defines how elements fade in */
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Fade to fully visible */
+    transform: translateY(0); /* Move to final position */
+  }
+}
+
+/* Navbar fade in/out animations */
+#navbar.hidden {
+  transform: translateY(-100%); /* Slide up out of view */
+  opacity: 0; /* Fade to invisible */
+}
+
+/* Project detail page styling */
+.project-detail {
+    padding: 40px;
+    margin-top: 120px;
+}
+
+.project-hero {
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: block;
+}
+
+.project-description {
+    margin-top: 30px;
+}
+
+.project-description h2 {
+    margin: 20px 0 10px;
+}
+
+.project-description ul {
+    list-style-position: inside;
+    margin: 10px 0;
+}
+
+/* Intro section styling */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #FFDF00;
+  padding: 5px;
+  background: white;
+}
