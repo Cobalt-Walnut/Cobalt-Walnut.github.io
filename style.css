@@ -134,7 +134,7 @@ section {
 
 /* Project image hover effect */
 .project:hover img {
-  transform: scale(3) translateX(60px) translateY(-40px); /* Pop-out effect */
+  transform: scale(2.2) translateX(60px) translateY(-40px); /* Pop-out effect */
   box-shadow: 0 30px 60px rgba(0,0,0,0.3); /* Shadow for depth */
   z-index: 100; /* Ensure image stays above other elements */
 }
