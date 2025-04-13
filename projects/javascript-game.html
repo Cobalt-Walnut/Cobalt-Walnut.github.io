@@ -6,13 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TacocaT - JavaScript Game</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .game-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px auto;
+            width: 310px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #333;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #fff;
+        }
+        .cell:hover {
+            background: #f0f0f0;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        .difficulty-btn {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .active {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <nav id="navbar">
         <div class="container nav-container">
             <div class="logo-container">
                 <a href="../index.html"><span>TacocaT Inc.</span></a>
-                <img src="../IMG_1815.jpeg" alt="Logo" class="nav-logo">
+                <img src="../IMG_1815" alt="Logo" class="nav-logo">
             </div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
@@ -28,13 +67,22 @@
                 <img src="../IMG_1818.jpeg" alt="JavaScript Game" class="project-hero">
                 <div class="project-description">
                     <h2>About</h2>
-                    <p>A simple browser-based game created using JavaScript.</p>
+                    <p>A Tic Tac Toe game with three difficulty levels created using JavaScript.</p>
                     <h2>Technologies Used</h2>
                     <ul>
                         <li>JavaScript</li>
-                        <li>HTML5 Canvas</li>
+                        <li>HTML5</li>
                         <li>CSS3</li>
                     </ul>
+                </div>
+                <div class="game-container">
+                    <div class="controls">
+                        <button class="difficulty-btn active" data-level="easy">Easy</button>
+                        <button class="difficulty-btn" data-level="medium">Medium</button>
+                        <button class="difficulty-btn" data-level="hard">Hard</button>
+                    </div>
+                    <div class="board"></div>
+                    <button onclick="resetGame()" class="toggle-button">Reset Game</button>
                 </div>
             </section>
         </div>
@@ -45,6 +93,147 @@
             <p>© 4/10/2025 Christopher Wang.</p>
         </div>
     </footer>
+    <script>
+        const board = Array(9).fill('');
+        let currentPlayer = 'X';
+        let gameActive = true;
+        let difficulty = 'easy';
+
+        // Initialize the game board
+        const boardElement = document.querySelector('.board');
+        for (let i = 0; i < 9; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.setAttribute('data-index', i);
+            cell.addEventListener('click', handleCellClick);
+            boardElement.appendChild(cell);
+        }
+
+        // Handle difficulty buttons
+        document.querySelectorAll('.difficulty-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.difficulty-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                difficulty = btn.dataset.level;
+                resetGame();
+            });
+        });
+
+        function handleCellClick(e) {
+            const index = e.target.dataset.index;
+            if (board[index] === '' && gameActive && currentPlayer === 'X') {
+                makeMove(index);
+                if (gameActive) {
+                    setTimeout(() => computerMove(), 500);
+                }
+            }
+        }
+
+        function makeMove(index) {
+            board[index] = currentPlayer;
+            document.querySelectorAll('.cell')[index].textContent = currentPlayer;
+            if (checkWin(board, currentPlayer)) {
+                gameActive = false;
+                setTimeout(() => alert(`${currentPlayer} wins!`), 100); // Display win message after a short delay
+                return;
+            }
+            if (!board.includes('')) {
+                gameActive = false;
+                setTimeout(() => alert("It's a draw!"), 100); // Display draw message after a short delay
+                return;
+            }
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+
+        function computerMove() {
+            let move;
+            switch(difficulty) {
+                case 'easy':
+                    move = getRandomMove();
+                    break;
+                case 'medium':
+                    move = Math.random() < 0.5 ? getBestMove() : getRandomMove();
+                    break;
+                case 'hard':
+                    move = getBestMove();
+                    break;
+            }
+            makeMove(move);
+        }
+
+        function getRandomMove() {
+            const emptyCells = board.reduce((acc, cell, index) => {
+                if (cell === '') acc.push(index);
+                return acc;
+            }, []);
+            return emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        }
+
+        function getBestMove() {
+            let bestScore = -Infinity;
+            let bestMove;
+            for (let i = 0; i < 9; i++) {
+                if (board[i] === '') {
+                    board[i] = 'O';
+                    let score = minimax(board, 0, false);
+                    board[i] = '';
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMove = i;
+                    }
+                }
+            }
+            return bestMove;
+        }
+
+        function minimax(board, depth, isMaximizing) {
+            if (checkWin(board, 'O')) return 1;
+            if (checkWin(board, 'X')) return -1;
+            if (!board.includes('')) return 0;
+
+            if (isMaximizing) {
+                let bestScore = -Infinity;
+                for (let i = 0; i < 9; i++) {
+                    if (board[i] === '') {
+                        board[i] = 'O';
+                        let score = minimax(board, depth + 1, false);
+                        board[i] = '';
+                        bestScore = Math.max(score, bestScore);
+                    }
+                }
+                return bestScore;
+            } else {
+                let bestScore = Infinity;
+                for (let i = 0; i < 9; i++) {
+                    if (board[i] === '') {
+                        board[i] = 'X';
+                        let score = minimax(board, depth + 1, true);
+                        board[i] = '';
+                        bestScore = Math.min(score, bestScore);
+                    }
+                }
+                return bestScore;
+            }
+        }
+
+        function checkWin(board, player) {
+            const winConditions = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                [0, 4, 8], [2, 4, 6] // Diagonals
+            ];
+            return winConditions.some(condition => 
+                condition.every(index => board[index] === player)
+            );
+        }
+
+        function resetGame() {
+            board.fill('');
+            document.querySelectorAll('.cell').forEach(cell => cell.textContent = '');
+            currentPlayer = 'X';
+            gameActive = true;
+        }
+    </script>
     <script src="../script.js"></script>
 </body>
 </html>
