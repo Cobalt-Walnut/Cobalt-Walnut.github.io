@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
 }
 
 /* Base body styles */
@@ -10,7 +11,8 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
   color: #222;
-  transition: background-color 0.5s, color 0.5s; /* Smooth transition for dark mode */
+  transition: background-color 0.5s, color 0.5s;
+  /* Smooth transition for dark mode */
   line-height: 1.6;
 }
 
@@ -24,14 +26,17 @@ body {
 
 /* Navbar styling */
 nav {
-  position: fixed; /* Keep navbar fixed at top */
+  position: fixed;
+  /* Keep navbar fixed at top */
   width: 100%;
   background-color: #FFDF00;
   border-bottom: 1px solid #ddd;
-  z-index: 1000; /* Ensure navbar stays above other content */
+  z-index: 1000;
+  /* Ensure navbar stays above other content */
   transition: all 0.3s ease;
   opacity: 1;
-  transform: translateY(0); /* Start position */
+  transform: translateY(0);
+  /* Start position */
 }
 
 /* Navbar container layout */
@@ -91,8 +96,13 @@ nav {
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .toggle-button.rotating {
@@ -115,7 +125,8 @@ section {
   margin-bottom: 30px;
   background: #f5f5f5;
   border-radius: 10px;
-  overflow: visible; /* Allow content to overflow for hover effect */
+  overflow: visible;
+  /* Allow content to overflow for hover effect */
   text-decoration: none;
   color: inherit;
   transition: background 0.5s;
@@ -134,9 +145,12 @@ section {
 
 /* Project image hover effect */
 .project:hover img {
-  transform: scale(2.2) translateX(60px) translateY(-40px); /* Pop-out effect */
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3); /* Shadow for depth */
-  z-index: 100; /* Ensure image stays above other elements */
+  transform: scale(2.2) translateX(60px) translateY(-40px);
+  /* Pop-out effect */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  /* Shadow for depth */
+  z-index: 100;
+  /* Ensure image stays above other elements */
 }
 
 /* Project content styling */
@@ -184,54 +198,62 @@ body.dark-mode footer {
 
 /* Fade-in animation for sections and projects */
 .fade-in {
-  opacity: 0; /* Start invisible */
-  transform: translateY(20px); /* Start slightly below final position */
-  animation: fadeInUp 1s forwards; /* Fade and move up over 1 second */
-  animation-delay: 0.3s; /* Wait 0.3s before starting animation */
+  opacity: 0;
+  /* Start invisible */
+  transform: translateY(20px);
+  /* Start slightly below final position */
+  animation: fadeInUp 1s forwards;
+  /* Fade and move up over 1 second */
+  animation-delay: 0.3s;
+  /* Wait 0.3s before starting animation */
 }
 
 /* Defines how elements fade in */
 @keyframes fadeInUp {
   to {
-    opacity: 1; /* Fade to fully visible */
-    transform: translateY(0); /* Move to final position */
+    opacity: 1;
+    /* Fade to fully visible */
+    transform: translateY(0);
+    /* Move to final position */
   }
 }
 
 /* Navbar fade in/out animations */
 #navbar.hidden {
-  transform: translateY(-100%); /* Slide up out of view */
-  opacity: 0; /* Fade to invisible */
+  transform: translateY(-100%);
+  /* Slide up out of view */
+  opacity: 0;
+  /* Fade to invisible */
 }
 
 /* Project detail page styling */
 .project-detail {
-    padding: 40px;
-    margin-top: 120px;
+  padding: 40px;
+  margin-top: 120px;
 }
 
 .project-hero {
-    max-width: 100%;
-    max-height: 600px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    margin: 20px 0;
-    display: block;
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: block;
 }
 
 .project-description {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .project-description h2 {
-    margin: 20px 0 10px;
+  margin: 20px 0 10px;
 }
 
 .project-description ul {
-    list-style-position: inside;
-    margin: 10px 0;
+  list-style-position: inside;
+  margin: 10px 0;
 }
 
 /* Intro section styling */
