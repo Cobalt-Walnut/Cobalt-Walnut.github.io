@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TacocaT - Python Game</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <nav id="navbar">
         <div class="container nav-container">
@@ -28,13 +29,24 @@
                 <img src="../IMG_1819.jpeg" alt="Python Game" class="project-hero">
                 <div class="project-description">
                     <h2>About</h2>
-                    <p>A simple game made using Python and Pygame framework.</p>
+                    <p>A simple game made using Python and the Pygame framework.</p>
+
                     <h2>Technologies Used</h2>
                     <ul>
                         <li>Python</li>
                         <li>Pygame</li>
                         <li>Game Development</li>
                     </ul>
+
+                    <h2>Play the Game</h2>
+                    <iframe id="gameIframe" src="../projects/pygbag.html" width="400" height="500"
+                        style="border: none;">
+                        Your browser does not support iframes.
+                    </iframe>
+
+                    <h2>Download</h2>
+                    <p>Want to play on Android? <a href="../projects/pygbag-test.apk" download>Download the APK
+                            here</a>.</p>
                 </div>
             </section>
         </div>
@@ -45,6 +57,23 @@
             <p>© 4/10/2025 Christopher Wang.</p>
         </div>
     </footer>
+
     <script src="../script.js"></script>
+
+    <script>
+        // Disable the "Leave Site?" pop-up when navigating away or closing the page
+        window.addEventListener('beforeunload', function (event) {
+            // Check if the game iframe is in progress or not
+            var iframe = document.getElementById('gameIframe');
+            if (iframe.contentWindow && iframe.contentWindow.document.body) {
+                var isGameActive = iframe.contentWindow.gameActive; // This is assuming you set this variable inside the iframe when the game is active
+                if (isGameActive) {
+                    event.preventDefault();
+                    event.returnValue = ''; // Required for most browsers
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
