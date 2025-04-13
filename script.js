@@ -20,7 +20,7 @@ const navbarHeight = navbar.offsetHeight; // Get navbar height
 // Add scroll event listener to window
 window.addEventListener('scroll', () => {
   let scrollTop = window.scrollY; // Get current scroll position
-  
+
   // Hide navbar when scrolling down past navbar height
   if (scrollTop > navbarHeight) {
     if (scrollTop > lastScrollTop) {
@@ -31,6 +31,6 @@ window.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('hidden'); // Always show navbar at top of page
   }
-  
+
   lastScrollTop = scrollTop; // Update last scroll position
 });
