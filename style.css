@@ -16,6 +16,11 @@ body {
   line-height: 1.6;
 }
 
+/* Custom class for 32px of space below a paragraph */
+.extra-space {
+    margin-bottom: 32px;
+}
+
 /* Container for content width control */
 .container {
   width: 90%;
