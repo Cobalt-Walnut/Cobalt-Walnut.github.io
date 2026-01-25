@@ -127,7 +127,7 @@ h1 a, h2 a, h3 a {
 <!--
 /* Optional: change color when hovering over the heading link */
 h1 a:hover, h2 a:hover, h3 a:hover {
-  color: #FFDF00; /* Uses your theme's yellow color */
+  text-shadow: 2px 2px 4px #000000; /* Horizontal, Vertical, Blur, Color */
 }
 -->
 /* Project card styling */
