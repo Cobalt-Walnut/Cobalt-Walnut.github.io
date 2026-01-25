@@ -136,16 +136,21 @@ section {
   transition: background-color 0.5s;
 }
 
-/* Styling for headings AND nav links that contain links */
-h1 a, h2 a, h3 a, .nav-links a {
+/* Styling for all links in headings, nav bars, and intro paragraphs */
+h1 a, h2 a, h3 a, .nav-links a, .intro-text a {
   text-decoration: none; 
   color: inherit;         
-  transition: all 0.3s; /* "all" covers color and text-shadow changes */
+  transition: all 0.3s ease; /* Ensures smooth transition for the shadow */
 }
 
-/* Apply the shadow when hovering over headings or nav links */
-h1 a:hover, h2 a:hover, h3 a:hover, .nav-links a:hover {
+/* Apply shadow when hovering over any of these links */
+h1 a:hover, h2 a:hover, h3 a:hover, .nav-links a:hover, .intro-text a:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.intro-text a {
+    font-weight: bold; /* Helps the link stand out from regular paragraph text */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optional: a very light underline */
 }
 
 /* Project card styling */
