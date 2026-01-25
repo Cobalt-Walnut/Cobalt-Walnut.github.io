@@ -18,7 +18,8 @@ body {
 
 /* Custom class for 32px of space below a paragraph */
 .extra-space {
-    margin-bottom: 32px;
+    margin-bottom: 128px !important; /* !important forces margin to apply to web page*/
+    display: block; /* Ensures the element respects margins */
 }
 
 /* Container for content width control */
