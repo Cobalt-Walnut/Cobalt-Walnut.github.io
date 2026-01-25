@@ -5,6 +5,10 @@
     <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Christopher Wang's project portfolio: robotics, coding, and Raspberry Pi builds like TacocaT and EchoLingo.">
+    <meta property="og:title" content="TacocaT - Portfolio">
+    <meta property="og:description" content="Robotics + coding projects by Christopher Wang.">
+    <meta property="og:type" content="website">
     <title>TacocaT - Home</title> <!-- Page title shown in browser tab -->
     <link rel="stylesheet" href="style.css"> <!-- Links to external CSS file -->
 </head>
@@ -14,7 +18,7 @@
     <nav id="navbar">
         <div class="container nav-container">
             <div class="logo-container">
-                <span>TacocaT Inc.</span>
+                <a class="brand" href="index.html">TacocaT Inc.</a>
                 <img src="IMG_1815.jpeg" alt="Logo" class="nav-logo">
             </div>
             <!-- Navigation menu items -->
@@ -40,104 +44,62 @@
                     <p>My name is Christopher Wang. I'm an 8th grader attending The Village Middle School in Houston, Texas</p>
                     <p>I have been doing robotics ever since I was 7. I was introduced to FLL, </p>
                     <p>a Lego Robotics competition, and did 5 years (ages 7 - 12).</p>
-                    <p>Then I did FTC for a year in 8th grade, mentoring and helping my school's team.</p>
-                    <p>I also like playing the alto saxophone with Village's Band Elective;</p>
-                    <p>and also learned to play tenor sax in 8th grade.</p>
-                    <p>I created this website using HTML, JavaScript, and CSS to display </p>
-                    <p>and keep a record of all my past and current projects.</p>
-                    <p>You can find everything at:</p>
-                    <a href="https://github.com/Cobalt-Walnut" target="_blank">My Github</a>
+                    <p>Then I did FTC for a year in 8th grade, mentoring and helping my teammates make the robot.</p>
+                    <p>Now, I am doing a new highschool robotics competition, VEX, called the TacocaT project.</p>
                 </div>
+                <!-- Intro logo -->
                 <img src="IMG_1815.jpeg" alt="Logo" class="intro-logo">
             </section>
 
             <!-- Big Projects section -->
-            <section class="projects" id="big-projects">
+            <section id="big-projects">
                 <h2>Big Projects</h2>
 
-                <!-- Portfolio Website project card -->
-                <a href="projects/portfolio.html" class="project fade-in">
-                    <img src="IMG_1814.jpeg" alt="Portfolio Website">
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio to showcase my projects.</p>
-                    </div>
-                </a>
-
-                <!-- TacocaT Project card -->
-                <a href="projects/tacocat.html" class="project fade-in">
+                <!-- TacocaT project card -->
+                <a href="projects/tacocat.html" class="project">
                     <img src="TacocaT-Standing-Jan2026.jpg" alt="TacocaT Project">
                     <div class="project-content">
                         <h3>TacocaT Project</h3>
-                        <p>A quadrupedal robot similar to the MIT Mini Cheetah.</p>
-                        <p>Stood up in 2026</p>
+                        <p>A quadrupedal robot similar to the MIT Mini Cheetah. Standing up by itself!</p>
                     </div>
                 </a>
 
                 <!-- Offline Translator project card -->
-                <a href="projects/offline-translator.html" class="project fade-in">
-                    <img src="EchoLingo-2025.jpg" alt="EchoLingo - Offline Translator">
+                <a href="projects/offline-translator.html" class="project">
+                    <img src="EchoLingo-2025.jpg" alt="Offline Translator">
                     <div class="project-content">
-                        <h3>EchoLingo - Offline Translator</h3>
-                        <p>A speech-to-speech translator running on a Raspberry Pi.</p>
-                        <p>It was funded by Nord Anglia's Social Impact Grant in 2026.</p>
+                        <h3>Offline Translator (EchoLingo)</h3>
+                        <p>A Raspberry Pi speech-to-speech translator that works without internet access.</p>
                     </div>
                 </a>
             </section>
 
             <!-- Side Projects section -->
-            <section class="projects" id="side-projects">
+            <section id="side-projects">
                 <h2>Side Projects</h2>
 
-                <!-- SoundBrite project card -->
-                <a href="projects/soundbrite.html" class="project fade-in">
-                    <img src="IMG_1812.jpeg" alt="SoundBrite">
+                <!-- Portfolio Website project card -->
+                <a href="projects/portfolio.html" class="project">
+                    <img src="IMG_1814.jpeg" alt="Portfolio Website">
                     <div class="project-content">
-                        <h3>SoundBrite</h3>
-                        <p>A device that reacts to sound, visually showing the beat and notes of instruments.</p>
-                        <p>Based on the Adafruit CPX and used in the 2025 VMS Band Winter Concert.</p>
-                    </div>
-                </a>
-
-                <!-- Pygame Adventure project card -->
-                <a href="projects/star-trek-game.html" class="project fade-in">
-                    <img src="IMG_1813.jpeg" alt="Pygame Adventure">
-                    <div class="project-content">
-                        <h3>Star Trek Game</h3>
-                        <p>A 2D Star-Trek-based game made using Pygame, complete with sounds and images.</p>
+                        <h3>Portfolio Website</h3>
+                        <p>This website — built to showcase my projects and skills.</p>
                     </div>
                 </a>
             </section>
+
             <!-- Coding Projects section -->
-            <section class="projects" id="coding-projects">
+            <section id="coding-projects">
                 <h2>Coding Projects</h2>
-
-                <!-- Python Game project card -->
-                <a href="projects/python-game.html" class="project fade-in">
-                    <img src="IMG_1819.jpeg" alt="Python Game">
-                    <div class="project-content">
-                        <h3>Python Game</h3>
-                        <p>Catch the Shapes made using Python and Pygame.</p>
-                        <p>I used Pygbag to make it run on HTML.</p>
-                    </div>
-                </a>
-
-                <!-- JavaScript Project card -->
-                <a href="projects/javascript-game.html" class="project fade-in">
-                    <img src="IMG_1818.jpeg" alt="JavaScript Game">
-                    <div class="project-content">
-                        <h3>JavaScript Game</h3>
-                        <p>A simple 1 player Tic-Tac-Toe game made using JavaScript.</p>
-                    </div>
-                </a>
+                <p>(Add your coding projects here!)</p>
             </section>
 
             <!-- Contact section -->
-            <section class="contact fade-in" id="contact">
+            <section id="contact">
                 <h2>Contact</h2>
-                <p>Email me at doubaok1710325@gmail.com</p>
+                <p>Email me at <a href="mailto:doubaok1710325@gmail.com">doubaok1710325@gmail.com</a></p>
                 <p>All project links are at:</p>
-                <a href="https://github.com/Cobalt-Walnut" target="_blank">My Github</a>
+                <a href="https://github.com/Cobalt-Walnut" target="_blank" rel="noopener noreferrer">My Github</a>
             </section>
         </div>
     </main>
@@ -147,7 +109,6 @@
         <div class="container">
             <p>© 10 April 2025 Christopher Wang.</p>
             <p>Updated 14 Jan 2026</p>
-            
         </div>
     </footer>
 
