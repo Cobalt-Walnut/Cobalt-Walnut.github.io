@@ -136,16 +136,16 @@ section {
   transition: background-color 0.5s;
 }
 
-/* Styling for headings that contain links */
-h1 a, h2 a, h3 a {
-  text-decoration: none; /* Removes the underline */
-  color: inherit;         /* Makes the link the same color as the heading text */
-  transition: color 0.3s; /* Optional: adds a smooth color change on hover */
+/* Styling for headings AND nav links that contain links */
+h1 a, h2 a, h3 a, .nav-links a {
+  text-decoration: none; 
+  color: inherit;         
+  transition: all 0.3s; /* "all" covers color and text-shadow changes */
 }
 
-/* Optional: change color when hovering over the heading link */
-h1 a:hover, h2 a:hover, h3 a:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+/* Apply the shadow when hovering over headings or nav links */
+h1 a:hover, h2 a:hover, h3 a:hover, .nav-links a:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 /* Project card styling */
