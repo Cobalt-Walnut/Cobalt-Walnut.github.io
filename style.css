@@ -124,12 +124,12 @@ h1 a, h2 a, h3 a {
   color: inherit;         /* Makes the link the same color as the heading text */
   transition: color 0.3s; /* Optional: adds a smooth color change on hover */
 }
-<!--
+
 /* Optional: change color when hovering over the heading link */
 h1 a:hover, h2 a:hover, h3 a:hover {
   text-shadow: 2px 2px 4px #000000; /* Horizontal, Vertical, Blur, Color */
 }
--->
+
 /* Project card styling */
 .project {
   display: flex;
