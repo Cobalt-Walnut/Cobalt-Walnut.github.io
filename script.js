@@ -1,36 +1,52 @@
+// Dark Mode Toggle + Persistence
+const darkModeToggle = document.getElementById('darkModeToggle');
 
-// Dark Mode Toggle Functionality
-const darkModeToggle = document.getElementById('darkModeToggle'); // Get the dark mode button
-darkModeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
-  // Update button text based on current mode
-  darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? 'LIGHT MODE' : 'DARK MODE';
-  // Add rotation animation to button
-  darkModeToggle.classList.add('rotating');
-  setTimeout(() => {
-    darkModeToggle.classList.remove('rotating');
-  }, 500);
-});
-
-// Navbar Hide/Show on Scroll Functionality
-let lastScrollTop = 0; // Track last scroll position
-const navbar = document.getElementById('navbar'); // Get the navbar element
-const navbarHeight = navbar.offsetHeight; // Get navbar height
-
-// Add scroll event listener to window
-window.addEventListener('scroll', () => {
-  let scrollTop = window.scrollY; // Get current scroll position
-
-  // Hide navbar when scrolling down past navbar height
-  if (scrollTop > navbarHeight) {
-    if (scrollTop > lastScrollTop) {
-      navbar.classList.add('hidden');  // Hide navbar when scrolling down
-    } else {
-      navbar.classList.remove('hidden'); // Show navbar when scrolling up
-    }
-  } else {
-    navbar.classList.remove('hidden'); // Always show navbar at top of page
+function applyDarkMode(isDark) {
+  document.body.classList.toggle('dark-mode', isDark);
+  if (darkModeToggle) {
+    darkModeToggle.textContent = isDark ? 'LIGHT MODE' : 'DARK MODE';
   }
+}
 
-  lastScrollTop = scrollTop; // Update last scroll position
-});
+const savedDarkMode = localStorage.getItem('darkMode');
+if (savedDarkMode !== null) {
+  applyDarkMode(savedDarkMode === 'true');
+} else {
+  applyDarkMode(false);
+}
+
+if (darkModeToggle) {
+  darkModeToggle.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark-mode');
+    applyDarkMode(isDark);
+    localStorage.setItem('darkMode', String(isDark));
+
+    // Add rotation animation to button
+    darkModeToggle.classList.add('rotating');
+    setTimeout(() => darkModeToggle.classList.remove('rotating'), 500);
+  });
+}
+
+// Navbar Hide/Show on Scroll
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+
+if (navbar) {
+  const navbarHeight = navbar.offsetHeight;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > navbarHeight) {
+      if (scrollTop > lastScrollTop) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+    } else {
+      navbar.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop;
+  });
+}
