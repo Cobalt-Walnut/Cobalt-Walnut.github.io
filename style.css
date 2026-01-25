@@ -18,8 +18,20 @@ body {
 
 /* Custom class for 32px of space below a paragraph */
 .extra-space {
-    margin-bottom: 128px !important; /* !important forces margin to apply to web page*/
+    margin-bottom: 1.5rem !important; /* !important forces margin to apply to web page*/
     display: block; /* Ensures the element respects margins */
+}
+
+.nav-links a {
+    font-size: 1.2rem; /* Adjust this number (e.g., 1.5rem) to make it even bigger */
+    font-weight: bold;  /* Optional: makes the text thicker */
+    text-decoration: none;
+}
+
+/* This targets your "TacocaT Inc." logo text */
+.brand {
+    font-size: 2rem; 
+    text-decoration: none;
 }
 
 /* Container for content width control */
