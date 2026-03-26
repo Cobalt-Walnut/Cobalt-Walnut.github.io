@@ -312,3 +312,11 @@ body.dark-mode footer {
   padding: 5px;
   background: white;
 }
+
+/* Styles the caption text */
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 8px; /* Adds a little breathing room below the image */
+  color: #555;      /* Optional: a slightly softer color than pure black */
+}
