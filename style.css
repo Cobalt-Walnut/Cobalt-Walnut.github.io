@@ -299,27 +299,21 @@ body.dark-mode footer {
 }
 
 .side-image-wrap-text-left {
-  float: right;
-  object-fit: contain;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  float: right; /* Image on right, text on left */
+  margin-left: 20px; /* Space between the text and the image */
+  margin-bottom: 10px;
   max-width: 50%;
   max-height: 400px;
-  width: auto;
-  height: auto;
+  border-radius: 10px;
 }
 
 .side-image-wrap-text-right {
-  float: left;
-  object-fit: contain;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  float: left; /* Image on left, text on right */
+  margin-right: 20px; /* Space between the image and the text */
+  margin-bottom: 10px;
   max-width: 50%;
   max-height: 400px;
-  width: auto;
-  height: auto;
+  border-radius: 10px;
 }
 
 .project-description {
