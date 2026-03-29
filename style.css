@@ -201,40 +201,6 @@ footer {
   transition: background-color 0.5s;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #ddd;
-}
-
-body.dark-mode nav {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode .nav-links a {
-  color: #ccc;
-}
-
-body.dark-mode section {
-  background: #1c1c1c;
-}
-
-body.dark-mode .project {
-  background: #2a2a2a;
-}
-
-body.dark-mode .project:hover {
-  background: #3a3a3a;
-}
-
-body.dark-mode footer {
-  background: #1e1e1e;
-}
-
-body.dark-mode figcaption {
-  color: #bbb;      /* Light grey for dark mode to ensure readability */
-}
-
 /* Fade-in animation for sections and projects */
 .fade-in {
   opacity: 0;
@@ -361,4 +327,56 @@ figcaption {
   font-style: italic;
   margin-top: 8px; /* Adds a little breathing room below the image */
   color: #555;      /* Optional: a slightly softer color than pure black */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark-mode nav {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-links a {
+  color: #ccc;
+}
+
+body.dark-mode section {
+  background: #1c1c1c;
+}
+
+body.dark-mode .project {
+  background: #2a2a2a;
+}
+
+body.dark-mode .project:hover {
+  background: #3a3a3a;
+}
+
+body.dark-mode footer {
+  background: #1e1e1e;
+}
+
+body.dark-mode figcaption {
+  color: #bbb !important;
+}
+
+body.dark-mode a:link {
+  color: #8ab4f8; /* A lighter, more readable blue for dark mode */
+}
+
+body.dark-mode a:visited {
+  color: #c58af9; /* A softer purple for visited links */
+}
+
+body.dark-mode a:hover {
+  color: #ffffff; /* Bright white on hover for clarity */
+  text-decoration: underline;
+}
+
+/* If you have links specifically in paragraphs, this ensures they stand out */
+body.dark-mode p a {
+  color: #8ab4f8;
 }
