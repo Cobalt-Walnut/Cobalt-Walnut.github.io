@@ -367,10 +367,6 @@ body.dark-mode a:link {
   color: #8ab4f8; /* A lighter, more readable blue for dark mode */
 }
 
-body.dark-mode a:visited {
-  color: #c58af9; /* A softer purple for visited links */
-}
-
 body.dark-mode a:hover {
   color: #ffffff; /* Bright white on hover for clarity */
   text-decoration: underline;
