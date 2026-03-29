@@ -68,6 +68,11 @@ nav {
   gap: 10px;
 }
 
+.logo-container span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .nav-logo {
   width: 100px;
   height: 100px;
@@ -121,7 +126,8 @@ section {
 /* Styling for header and nav links */
 h1 a, h2 a, h3 a, .nav-links a, .intro-text a {
   text-decoration: none; 
-  color: inherit;         
+  color: inherit;
+  transition: all 0.3s ease;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, .nav-links a:hover, .intro-text a:hover {
@@ -148,6 +154,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, .nav-links a:hover, .intro-text a:hover {
   object-fit: cover;
   transition: all 0.3s ease;
   border-radius: 8px;
+  position: relative;
 }
 
 .project:hover img {
@@ -252,8 +259,9 @@ footer {
   gap: 40px;
 }
 
-.intro-text {
-  flex: 1;
+.intro-text a {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .intro-logo {
@@ -291,6 +299,10 @@ body.dark-mode section {
 
 body.dark-mode .project {
   background: #2a2a2a;
+}
+
+body.dark-mode .project:hover {
+  background: #3a3a3a;
 }
 
 body.dark-mode footer {
