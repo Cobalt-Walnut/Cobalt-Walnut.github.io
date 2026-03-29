@@ -235,6 +235,37 @@ footer {
   margin-top: 30px;
 }
 
+.project-description h2 {
+  margin: 20px 0 10px;
+}
+
+.project-description ul {
+  list-style-position: inside;
+  margin: 10px 0;
+}
+
+/* Intro section styling */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #FFDF00;
+  padding: 5px;
+  background: white;
+}
+
 figcaption {
   text-align: center;
   font-style: italic;
