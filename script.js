@@ -50,3 +50,9 @@ if (navbar) {
     lastScrollTop = scrollTop;
   });
 }
+
+// Open external links in a new tab with security
+document.querySelectorAll('a[href^="http"]').forEach(link => {
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+});
