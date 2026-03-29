@@ -268,14 +268,16 @@ body.dark-mode footer {
 }
 
 .project-hero {
-  max-width: 100%;
-  max-height: 600px;
-  width: auto;
-  height: auto;
   object-fit: contain;
   border-radius: 10px;
   margin: 20px 0;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
 }
 
 .project-description {
