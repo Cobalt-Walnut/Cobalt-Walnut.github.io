@@ -267,6 +267,11 @@ body.dark-mode footer {
   margin-top: 120px;
 }
 
+.centered-title {
+  text-align: center;
+  margin-top: 20px; /* Optional: adds some breathing room */
+}
+
 .project-hero {
   object-fit: contain;
   border-radius: 10px;
