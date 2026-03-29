@@ -358,3 +358,7 @@ figcaption {
   margin-top: 8px; /* Adds a little breathing room below the image */
   color: #555;      /* Optional: a slightly softer color than pure black */
 }
+
+.dark-mode figcaption {
+  color: #bbb;      /* Light grey for dark mode to ensure readability */
+}
