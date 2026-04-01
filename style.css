@@ -304,6 +304,14 @@ figcaption {
   transition: color 0.5s;
 }
 
+.p-space {
+    margin-bottom: 24px;
+}
+
+p + p {
+  margin-top: 20px;
+}
+
 /* DARK MODE*/
 
 body.dark-mode {
