@@ -121,6 +121,7 @@ section {
   padding: 40px;
   border-radius: 10px;
   transition: background-color 0.5s;
+  display: flow-root;
 }
 
 /* Styling for header and nav links */
@@ -256,6 +257,7 @@ footer {
 
 .project-description {
   margin-top: 30px;
+  display: flow-root;
 }
 
 .project-description h2 {
