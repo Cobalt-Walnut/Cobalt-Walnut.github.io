@@ -222,7 +222,7 @@ footer {
 /* Wrapping Classes */
 .side-image-wrap-text-left,
 .side-image-wrap-text-right {
-  max-width: 40%;
+  max-width: 33%;
   margin-bottom: 10px;
 }
 
@@ -239,9 +239,9 @@ footer {
 .side-image-wrap-text-left img,
 .side-image-wrap-text-right img {
   display: block;
-  width: 100%;
+  width: 33%;
   height: auto;
-  max-height: 300px;
+  max-height: 100px;
   object-fit: contain;
   border-radius: 10px;
 }
