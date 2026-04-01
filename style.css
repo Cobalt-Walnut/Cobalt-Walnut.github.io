@@ -239,10 +239,10 @@ footer {
 .side-image-wrap-text-left img,
 .side-image-wrap-text-right img {
   display: block;
-  width: 33%;
+  width: 100%;
+  max-width: 300px;   /* 👈 limits how big it can get */
   height: auto;
-  max-height: 100px;
-  object-fit: contain;
+  margin: 0 auto;     /* 👈 keeps it centered inside figure */
   border-radius: 10px;
 }
 
