@@ -225,6 +225,7 @@ footer {
 .side-image-wrap-text-right {
   max-width: 50%;
   margin-bottom: 10px;
+  margin-top: 25px;
 }
 
 .side-image-wrap-text-left {
@@ -309,7 +310,7 @@ figcaption {
 }
 
 p + p {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 /* DARK MODE*/
