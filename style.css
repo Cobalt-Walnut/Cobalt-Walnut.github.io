@@ -257,16 +257,17 @@ footer {
 }
 
 .image-pair-container {
-  display: flex;
+  display: flex !important;
   gap: 20px;
-  /* Aligns with your .container settings */
-  width: 90%;          
+  width: 100%;          /* This fills the parent .project-description */
   max-width: 1100px;   
-  margin: 40px auto;   /* Centers it and adds vertical spacing */
+  margin: 20px auto;   
+  clear: both;          /* This prevents previous floats from interfering */
+  overflow: hidden;
 }
 
 .side-by-side-figure {
-  flex: 1;             /* Makes both take up 50% width */
+  flex: 1;             
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -274,19 +275,10 @@ footer {
 
 .side-by-side-figure img {
   width: 100%;
-  /* FORCING EQUAL HEIGHT: */
-  aspect-ratio: 4 / 3; /* Adjust this (e.g., 1/1, 16/9) to your preference */
-  object-fit: cover;   /* Prevents stretching by cropping slightly if needed */
+  aspect-ratio: 4 / 3; 
+  object-fit: cover;   
   border-radius: 10px;
   display: block;
-}
-
-/* Reusing your existing figcaption styles */
-.side-by-side-figure figcaption {
-  text-align: center;
-  font-style: italic;
-  margin-top: 8px;
-  color: #555;
 }
 
 .project-description {
