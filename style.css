@@ -256,6 +256,35 @@ footer {
   color: #555;
 }
 
+/* This controls the combined rectangle size */
+.image-pair-container {
+  display: flex;
+  gap: 20px;
+  width: 80%;          /* <--- Change this % to control the screen size */
+  margin: 40px auto;   /* Centers the group on the page */
+}
+
+/* This styles the individual image units */
+.side-by-side-figure {
+  flex: 1;             /* Forces them to be equal width */
+  margin: 0;
+}
+
+.side-by-side-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Optional: Reuse your existing figcaption style */
+.side-by-side-figure figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 8px;
+  color: #555;
+}
+
 .project-description {
   margin-top: 30px;
   display: flow-root;
