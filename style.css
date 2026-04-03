@@ -333,11 +333,11 @@ figcaption {
 .p-space {
     margin-bottom: 40px;
 }
-
+/*
 p + p {
   margin-top: 40px;
 }
-
+*/
 /* DARK MODE*/
 
 body.dark-mode {
