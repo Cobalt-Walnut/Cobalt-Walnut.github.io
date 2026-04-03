@@ -256,28 +256,32 @@ footer {
   color: #555;
 }
 
-/* This controls the combined rectangle size */
 .image-pair-container {
   display: flex;
   gap: 20px;
-  width: 80%;          /* <--- Change this % to control the screen size */
-  margin: 0px auto;   /* Centers the group on the page */
+  /* Aligns with your .container settings */
+  width: 90%;          
+  max-width: 1100px;   
+  margin: 40px auto;   /* Centers it and adds vertical spacing */
 }
 
-/* This styles the individual image units */
 .side-by-side-figure {
-  flex: 1;             /* Forces them to be equal width */
+  flex: 1;             /* Makes both take up 50% width */
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .side-by-side-figure img {
   width: 100%;
-  height: auto;
+  /* FORCING EQUAL HEIGHT: */
+  aspect-ratio: 4 / 3; /* Adjust this (e.g., 1/1, 16/9) to your preference */
+  object-fit: cover;   /* Prevents stretching by cropping slightly if needed */
   border-radius: 10px;
   display: block;
 }
 
-/* Optional: Reuse your existing figcaption style */
+/* Reusing your existing figcaption styles */
 .side-by-side-figure figcaption {
   text-align: center;
   font-style: italic;
