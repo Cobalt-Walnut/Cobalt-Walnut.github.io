@@ -261,7 +261,7 @@ footer {
   display: flex;
   gap: 20px;
   width: 80%;          /* <--- Change this % to control the screen size */
-  margin: 40px auto;   /* Centers the group on the page */
+  margin: 0px auto;   /* Centers the group on the page */
 }
 
 /* This styles the individual image units */
