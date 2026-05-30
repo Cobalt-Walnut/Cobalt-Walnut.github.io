@@ -336,7 +336,7 @@ footer {
 
 figcaption {
   text-align: center;
-  font-style: italic;
+  font-style: normal;
   margin-top: 8px;
   color: #555;
   transition: color 0.5s;
