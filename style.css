@@ -295,47 +295,16 @@ footer {
   margin: 10px 0;
 }
 
-project-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: start;
+.left-side-image {
+    width: 40%;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.project-split-left,
-.project-split-right {
-    display: flex;
-    flex-direction: column;
-}
-
-.project-split img {
+.left-side-image img {
     width: 100%;
     border-radius: 10px;
     display: block;
-}
-
-.project-split figure {
-    margin: 0;
-}
-
-.project-split-left figure {
-    margin-top: 20px;
-}
-
-/* Mobile support */
-
-@media (max-width: 900px) {
-
-    .project-split {
-        grid-template-columns: 1fr;
-    }
-
-    .project-split-left,
-    .project-split-right {
-        width: 100%;
-    }
 }
 
 /* Intro section styling */
