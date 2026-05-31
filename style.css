@@ -350,6 +350,10 @@ p + h2 {
   margin-top: 60px;
   margin-bottom: 40px;
 }
+
+.offset-text {
+    margin-left: 50%;
+}
 /*
 p + p {
   margin-top: 40px;
