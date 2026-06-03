@@ -309,6 +309,7 @@ footer {
 
 .full-size-text {
   width: 100%;
+  clear: both;
   
 }
 
