@@ -307,6 +307,11 @@ footer {
     display: block;
 }
 
+.full-size-text {
+  width: 100%;
+  
+}
+
 /* Intro section styling */
 .intro {
   display: flex;
