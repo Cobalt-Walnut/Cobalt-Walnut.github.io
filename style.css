@@ -243,7 +243,6 @@ footer {
   display: block;
   width: 100%;
   max-width: 600px;   /* 👈 limits how big it can get */
-  max-height: 300px;
   height: auto;
   margin: 0 auto;     /* 👈 keeps it centered inside figure */
   border-radius: 10px;
