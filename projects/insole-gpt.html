@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Project page for Underfoot, a custom pressure-sensing insole for gait analysis.">
+    <meta property="og:title" content="Underfoot - A Smart Insole">
+    <meta property="og:description" content="A custom pressure-sensing insole designed to study gait and plantar pressure.">
+    <meta property="og:type" content="website">
+    <title>Underfoot - A Smart Insole</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <h1><a class="brand" href="../index.html">TacocaT Inc.</a></h1>
+                <img src="../TacocaT.jpeg" alt="TacocaT logo" class="nav-logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#big-projects">Big Projects</a></li>
+                <li><a href="../index.html#side-projects">Side Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+
+            <button id="darkModeToggle" class="toggle-button">DARK MODE</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container fade-in">
+            <section class="project-detail">
+
+                <h1 class="centered-title">Underfoot - A Smart Insole</h1>
+
+                <figure>
+                    <img src="../Insole-assets/Insole-V2.jpeg"
+                         alt="The Underfoot pressure-sensing insole"
+                         class="project-hero">
+                    <figcaption>The Underfoot Insole, November 2026</figcaption>
+                </figure>
+
+                <div class="project-description">
+
+                    <h2>Introduction</h2>
+                    <p class="p-space">
+                        Underfoot is a custom pressure-sensing insole designed to study
+                        how the foot interacts with the ground during walking. Inspired
+                        by my experiences with recurring shin splints as a cross-country
+                        runner, I wanted to develop a compact, removable system that could
+                        record plantar pressure without significantly altering the shoe's
+                        normal feel. The project combines a 3D-printed insole, pressure
+                        sensors, and a small microcontroller to investigate gait patterns.
+                    </p>
+
+                    <h2>The Start</h2>
+                    <p class="p-space">
+                        The first prototype began with a worn men's size 10 foam insole.
+                        Its visible wear marks helped identify where pressure was
+                        concentrated during use, providing a starting point for sensor
+                        placement.
+                    </p>
+
+                    <figure class="side-by-side-figure">
+                        <img src="../Insole-assets/InsoleV2-foambase.jpeg"
+                             alt="Worn men's size 10 foam insole with visible wear marks">
+                        <figcaption>
+                            <b><i>Figure 1:</i></b>
+                            The original foam insole used to guide sensor placement.
+                            <i>Dark wear marks helped identify areas of foot contact.</i>
+                        </figcaption>
+                    </figure>
+
+                    <h2>Hardware Basics</h2>
+                    <p class="p-space">
+                        The insole uses six DF9-16 force-sensitive resistors (FSRs)
+                        distributed across the heel, arches, and metatarsal region.
+                        Each sensor changes resistance as pressure is applied, allowing
+                        the system to measure how force is distributed across the foot.
+                        The sensors connect to an Arduino Nano, which reads their
+                        analog voltage signals through its 10-bit analog-to-digital
+                        converter.
+                    </p>
+
+                    <p class="p-space">
+                        To make the system wearable, the insole and its sensor
+                        compartments were designed around a flexible 3D-printed
+                        structure. TPU 95A was selected for its flexibility, while
+                        dedicated channels guide the sensor wiring toward the
+                        electronics mounted on the shoe.
+                    </p>
+
+                    <figure class="side-by-side-figure">
+                        <img src="../Insole-assets/InsoleV2-prototypes.png"
+                             alt="PLA prototype showing the six planned sensor locations">
+                        <figcaption>
+                            <b><i>Figure 2:</i></b>
+                            Early prototype showing the planned locations of the
+                            six pressure sensors.
+                            <i>This prototype was printed to reduce filament use and print time.</i>
+                        </figcaption>
+                    </figure>
+
+                    <h2>Insole Design</h2>
+                    <p>
+                        Sensor placement evolved through several prototypes. Initial
+                        testing used sensors beneath the heel and the first and fifth
+                        metatarsals. However, this arrangement provided limited
+                        information about differences between gait patterns. Additional
+                        locations were considered before settling on six sensors:
+                        one beneath the heel, one beneath each of the first, fourth,
+                        and fifth metatarsals, and one beneath each arch.
+                    </p>
+
+                    <figure class="side-by-side-figure">
+                        <img src="../Insole-assets/InsoleV2-key.png"
+                             alt="Final insole design with six pressure sensor locations">
+                        <figcaption>
+                            <b><i>Figure 3:</i></b>
+                            Final sensor arrangement across the heel, arches,
+                            and metatarsal region.
+                        </figcaption>
+                    </figure>
+
+                    <p class="p-space">
+                        Each sensor sits inside a dedicated cavity with a contact puck
+                        that transfers pressure to the sensing surface. The cavities
+                        and wiring channels were incorporated directly into the
+                        printed insole, keeping the sensors secured while allowing
+                        the assembly to remain removable.
+                    </p>
+
+                    <figure class="side-by-side-figure">
+                        <img src="../Insole-assets/InsoleV2-wirechannels.png"
+                             alt="3D-printed insole showing internal sensor and wire channels">
+                        <figcaption>
+                            <b><i>Figure 4:</i></b>
+                            Sensor cavities and wiring channels integrated into
+                            the insole structure.
+                        </figcaption>
+                    </figure>
+
+                    <h2>Electronics</h2>
+                    <p>
+                        The electronics are housed in a custom 3D-printed mount
+                        attached to the shoe. The Arduino Nano reads the six FSR
+                        signals through voltage-divider circuits, converting
+                        changes in sensor resistance into digital pressure readings.
+                        The readings are recorded to a microSD card as a CSV file,
+                        allowing the data to be transferred and analyzed later.
+                    </p>
+
+                    <figure class="side-image-wrap-text-left">
+                        <img src="../Insole-assets/InsoleV2-electronics.png"
+                             alt="Arduino Nano and microSD module mounted on the shoe">
+                        <figcaption>
+                            <b><i>Figure 5:</i></b>
+                            Electronics mount containing the Arduino Nano
+                            and microSD recording module.
+                        </figcaption>
+                    </figure>
+
+                    <p class="p-space">
+                        Because the FSRs behave as variable resistors, each sensor
+                        is connected to a voltage divider. As pressure increases,
+                        the sensor's resistance decreases, changing the voltage
+                        measured by the Arduino. This provides a simple way to
+                        convert pressure changes into electrical signals.
+                    </p>
+
+                    <figure class="side-image-wrap-text-right">
+                        <img src="../Insole-assets/InsoleV2-voltage-divider.png"
+                             alt="Voltage-divider circuit used to read the force-sensitive resistors">
+                        <figcaption>
+                            <b><i>Figure 6:</i></b>
+                            Voltage-divider circuit used to convert FSR resistance
+                            changes into measurable voltage signals.
+                        </figcaption>
+                    </figure>
+
+                    <h2>Further Documentation</h2>
+                    <p>
+                        For the complete methodology, circuit details, and gait
+                        classification research, see the
+                        <a href="https://github.com/Cobalt-Walnut/Insole-Research-Paper/">
+                            research paper
+                        </a>.
+                    </p>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../footer.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
