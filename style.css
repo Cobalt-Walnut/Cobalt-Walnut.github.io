@@ -274,11 +274,23 @@ footer {
 }
 
 .side-by-side-figure img {
-  width: 100%;
-  aspect-ratio: 4 / 3; 
-  object-fit: cover;   
-  border-radius: 10px;
-  display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image-pair-container {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .side-by-side-figure {
+        width: 100%;
+    }
 }
 
 .project-description {

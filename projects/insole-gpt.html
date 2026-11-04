@@ -125,16 +125,6 @@
                         </figcaption>
                     </figure>
 
-                    <h2>Electronics</h2>
-                    <p>
-                        The electronics are housed in a custom 3D-printed mount
-                        attached to the shoe. The Arduino Nano reads the six FSR
-                        signals through voltage-divider circuits, converting
-                        changes in sensor resistance into digital pressure readings.
-                        The readings are recorded to a microSD card as a CSV file,
-                        allowing the data to be transferred and analyzed later.
-                    </p>
-
                     <figure class="side-image-wrap-text-left">
                         <img src="../Insole-assets/InsoleV2-electronics.png"
                              alt="Arduino Nano and microSD module mounted on the shoe">
@@ -144,6 +134,16 @@
                             and microSD recording module.
                         </figcaption>
                     </figure>
+
+                    <h2>Electronics</h2>
+                    <p>
+                        The electronics are housed in a custom 3D-printed mount
+                        attached to the shoe. The Arduino Nano reads the six FSR
+                        signals through voltage-divider circuits, converting
+                        changes in sensor resistance into digital pressure readings.
+                        The readings are recorded to a microSD card as a CSV file,
+                        allowing the data to be transferred and analyzed later.
+                    </p>
 
                     <p class="p-space">
                         Because the FSRs behave as variable resistors, each sensor
@@ -180,16 +180,6 @@
                         reaches its peak, and disappears as the foot moves.
                     </p>
 
-                    <figure class="side-image-wrap-text-right">
-                        <img src="../Insole-assets/InsoleV1-DataGraphs.png"
-                            alt="Three plantar pressure graphs showing different foot movement patterns">
-                        <figcaption>
-                            <b><i>Figure 6: </i></b>
-                            Early plantar-pressure graphs showing the changing signals
-                            from the first metatarsal, fifth metatarsal, and heel.
-                        </figcaption>
-                    </figure>
-
                     <p>
                         I also wanted to see how the signals changed during more exaggerated
                         walking patterns. Using samples from LOG14, LOG12, and LOG13, I plotted
@@ -199,17 +189,34 @@
                         originally recorded.
                     </p>
 
-                    <figure class="side-image-wrap-text-right">
-                        <img src="../Insole-assets/Underfoot-raw-gait-samples.png"
-                            alt="Raw pressure signals from tiptoe, duckwalk, and heelwalk recordings">
-                        <figcaption>
-                            <b><i>Figure 7: </i></b>
-                            Raw plantar-pressure samples from LOG14 (tiptoe), LOG12
-                            (duckwalk), and LOG13 (heelwalk).
-                            <i>Red: first metatarsal, yellow: fifth metatarsal,
-                            blue: heel.</i>
-                        </figcaption>
-                    </figure>
+                    <div class="image-pair-container">
+
+                        <figure class="side-by-side-figure">
+                            <img src="../Insole-assets/InsoleV1-DataGraphs.png"
+                                alt="Initial plantar pressure graphs showing heel and metatarsal signals">
+
+                            <figcaption>
+                                <b><i>Figure 6: </i></b>
+                                Early plantar-pressure graphs showing the changing signals
+                                from the first metatarsal, fifth metatarsal, and heel.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="side-by-side-figure">
+                            <img src="../Insole-assets/Underfoot-raw-gait-samples-6-sensors.png"
+                                alt="Raw pressure signals from all six sensors during tiptoe, duckwalk, and heelwalk">
+
+                            <figcaption>
+                                <b><i>Figure 7: </i></b>
+                                Raw plantar-pressure samples from LOG14 (tiptoe), LOG12
+                                (duckwalk), and LOG13 (heelwalk).
+                                <i>Red: first metatarsal, Yellow: fifth metatarsal,
+                                Blue: heel, Green: fourth metatarsal, Purple: medial arch,
+                                Orange: lateral arch.</i>
+                            </figcaption>
+                        </figure>
+
+                    </div>
 
                     <p>
                         These graphs provided an initial look at how different gait patterns
