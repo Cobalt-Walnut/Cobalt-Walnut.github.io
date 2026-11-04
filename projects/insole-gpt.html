@@ -163,6 +163,60 @@
                         </figcaption>
                     </figure>
 
+                    <h2>Reading the Foot Data</h2>
+
+                    <p>
+                        Once the electronics were working, I could finally start looking at
+                        what the insole was actually recording. Each FSR produces a changing
+                        signal as pressure is applied and released, giving me a way to visualize
+                        how different parts of the foot interact with the ground throughout
+                        a step.
+                    </p>
+
+                    <p>
+                        The first graphs were particularly useful for understanding how
+                        pressure moves between the heel and forefoot. Each line represents
+                        a different sensor, allowing me to compare when pressure begins,
+                        reaches its peak, and disappears as the foot moves.
+                    </p>
+
+                    <figure class="landscape-figure">
+                        <img src="../Insole-assets/InsoleV1-DataGraphs.png"
+                            alt="Three plantar pressure graphs showing different foot movement patterns">
+                        <figcaption>
+                            <b><i>Figure 6: </i></b>
+                            Early plantar-pressure graphs showing the changing signals
+                            from the first metatarsal, fifth metatarsal, and heel.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        I also wanted to see how the signals changed during more exaggerated
+                        walking patterns. Using samples from LOG14, LOG12, and LOG13, I plotted
+                        three additional examples representing tiptoe, duckwalk, and heelwalk.
+                        These recordings were taken directly from the original CSV files
+                        without filtering, so they show the sensor readings as they were
+                        originally recorded.
+                    </p>
+
+                    <figure class="landscape-figure">
+                        <img src="../Insole-assets/Underfoot-raw-gait-samples.png"
+                            alt="Raw pressure signals from tiptoe, duckwalk, and heelwalk recordings">
+                        <figcaption>
+                            <b><i>Figure 7: </i></b>
+                            Raw plantar-pressure samples from LOG14 (tiptoe), LOG12
+                            (duckwalk), and LOG13 (heelwalk).
+                            <i>Red: first metatarsal, yellow: fifth metatarsal,
+                            blue: heel.</i>
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        These graphs provided an initial look at how different gait patterns
+                        affect the pressure signals. They also helped establish the foundation
+                        for the later data-processing and gait-classification work.
+                    </p>
+
                     <h2>Further Documentation</h2>
                     <p>
                         For the complete methodology, circuit details, and gait
