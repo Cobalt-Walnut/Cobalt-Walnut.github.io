@@ -256,19 +256,20 @@ footer {
   color: #555;
 }
 
+/* Side-by-side figures */
 .image-pair-container {
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 25px;
     width: 100%;
     max-width: 1500px;
     margin: 30px auto;
     clear: both;
+    align-items: start;
     overflow: visible;
-    align-items: flex-start;
 }
 
 .side-by-side-figure {
-    flex: 1;
     min-width: 0;
     margin: 0;
     display: flex;
@@ -279,27 +280,22 @@ footer {
     display: block;
     width: 100%;
     height: auto;
-    max-width: none;
     object-fit: contain;
     border-radius: 10px;
 }
 
-/* Captions */
 .side-by-side-figure figcaption {
     text-align: center;
     margin-top: 10px;
     font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-/* Mobile: stack figures */
+/* Mobile layout */
 @media (max-width: 768px) {
     .image-pair-container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .side-by-side-figure {
-        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 
