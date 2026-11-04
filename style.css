@@ -342,6 +342,41 @@ footer {
     }
 }
 
+.landscape-figure {
+    width: 100%;
+    max-width: 100%;
+    margin: 25px auto;
+    clear: both;
+}
+
+.landscape-figure img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.landscape-figure figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 8px;
+    color: #555;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .landscape-figure {
+        width: 100%;
+    }
+
+    .landscape-figure img {
+        max-width: 100%;
+    }
+}
+
 .project-description {
   margin-top: 30px;
   display: flow-root;
